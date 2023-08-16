@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/rgb.png">
+    <title>Random pallete of colors</title>
+</head>
+<body>
+    <header class="m_container">
+        <div class="container header_container">
+            <div class="logo_div">
+                <a href="index.html">
+                <h1 class="logo_text">random.<span class="logo_dif_text">colors</span></h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav_list">
+                    <a class="nav_link" href=""><li class="nav_item">Home</li></a>
+                    <a class="nav_link" href=""><li class="nav_item">About</li></a>
+                    <a class="nav_link try_it" href=""><li class="nav_items try_it_item">Try it</li></a>
+                </ul>
+            </nav>
+            <img src="assets/images/menu.svg" alt="" id="menu_icon" onclick="menuShow(src)">
+        </div>
+    </header>
+    <div class="loading_div m_container">
+        <div class="lds-hourglass"></div>
+    </div>
+    <div class="ask_div m_container">
+        <div class="container question_div">
+            <img src="assets/images/man.svg" alt="Man searching for a perfect color" class="man_img"></img>
+            <label class="how_many_colors">How many colors do you want in your palette?</label>
+            <input type="number" class="quantity_input"/>
+            <button class="submit_button" id='submit_button' onclick="generateColors()">Go</button>
+        </div>
+    </div>
+    <main class="m_container hide">
+        <div class="container color_cards_container">
+                <div class="color_card" id="reference_card">
+                    <div class="color"></div>
+                    <p class="hex_code">#ff62cb</p>
+                </div>
+        </div>
+        <button class="submit_button" id="again_button" onclick="generateColors()">Regenerate</button>
+    </main>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/colorGenerator.js"></script>
+</body>
+</html>
