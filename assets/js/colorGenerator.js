@@ -37,8 +37,9 @@ function generateColors() {
         alert('Insira um valor válido!')
     } else {
         //first: the next scene need to be prepared to be shown
-        const mainStage = document.querySelector('main')
+        var mainStage = document.querySelector('main')
         const cardsContainer = document.querySelector('.color_cards_container')
+        cardsContainer.innerHTML = ''
         var colorCards = colorsGenerator(inputValue)
 
         for (let x in colorCards) {
